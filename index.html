@@ -15,7 +15,7 @@
     <!-- si esta logeado -->
     <div id="loggedIn">
       <p id="username"></p>
-      <input id="LogOutButton" type="button" value="LOG OUT">
+      <input id="LogOutButton" onclick="logout()" type="button" value="LOG OUT">
     </div>
 
     <!-- si no esta logeado -->
@@ -24,7 +24,18 @@
       <input id="password" type="password">
       <input id="register" onclick="register()" type="button" value="REGISTER">
       <input id="login" onclick="login()" type="button" value="LOGIN">
+      <input id="loginFacebook" onclick="loginFacebook()" type="button" value="LOGIN FACEBOOK">
   </div>
+</div>
+
+<!-- CHAT -->
+<div>
+  <div id= "messageContainer">
+  </div>
+  <input id= "messageArea" type="text">
+  <input id= "sendButton" type="button" value="SEND" onclick="sendMessage()">
+</div>
+
 
   <!-- Inicializa el proyecto en Firebase -->
   <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
