@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,42 @@
   <link rel="stylesheet" href="style.css">
   <title>Document</title>
 </head>
+
 <body>
-  <script src="asset/js/app.js"></script>
+  <h1>Chat Laboratoria</h1>
+  <div id="loginContainer">
+    <!-- si esta logeado -->
+    <div id="loggedIn">
+      <p id="username"></p>
+      <input id="LogOutButton" type="button" value="LOG OUT">
+    </div>
+
+    <!-- si no esta logeado -->
+     <div id="loggedOut">
+      <input id="email" type="email">
+      <input id="password" type="password">
+      <input id="register" onclick="register()" type="button" value="REGISTER">
+      <input id="login" onclick="login()" type="button" value="LOGIN">
+  </div>
+
+  <!-- Inicializa el proyecto en Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyA3k8hggl745w-UjAeolbD-ws90U3PaPT8",
+      authDomain: "chatlaboratoria-bf9cc.firebaseapp.com",
+      databaseURL: "https://chatlaboratoria-bf9cc.firebaseio.com",
+      projectId: "chatlaboratoria-bf9cc",
+      storageBucket: "chatlaboratoria-bf9cc.appspot.com",
+      messagingSenderId: "933025665417"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <!-- Termina inicializacion Firebase -->
+
+
+  <script src="app.js"></script>
 </body>
+
 </html>
